@@ -1,2 +1,2 @@
-# Disaster-Response-Pipelines
+# Disaster Response Pipelines
 Machine Learning + Pandas +SQL
