@@ -28,9 +28,9 @@ This project took a deeper look at a survey on a small international student bod
 
 | Preprocessed data | Python Code | Processed data | HTML |
 | --- | --- | --- | --- |
-| data/disaster_categories.csv | data/process_data.py | data/DisasterResponse.db | app/templates/go.html |
-| data/disaster_messages.csv | models/train_classifier.py | models/classifier.pkl | app/templates/master.html |
-| | app/run.py | |
+| `data/disaster_categories.csv` | `data/process_data.py` | `data/DisasterResponse.db` | `app/templates/go.html` |
+| `data/disaster_messages.csv` | `models/train_classifier.py` | `models/classifier.pkl` | `app/templates/master.html` |
+| | `app/run.py` | |
 
 
 ## Results<a name="results"></a>
