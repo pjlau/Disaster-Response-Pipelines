@@ -32,28 +32,6 @@ This project took a deeper look at a survey on a small international student bod
 | data/disaster_messages.csv | models/train_classifier.py | models/classifier.pkl | app/templates/master.html |
 | | app/run.py | |
 
-### Preprocessed data
-
-- data/disaster_categories.csv
-- data/disaster_messages.csv
-
-### Python Code
-
-- data/process_data.py
-- models/train_classifier.py
-- app/run.py
-
-### Processed data
-
-- data/DisasterResponse.db
-- models/classifier.pkl
-
-### HTML
-
-- app/templates/go.html
-- app/templates/master.html
-
-
 The full set of files used in this data analytic study including (a) my python code in jupyter format and (b) two .csv files of the dataset publicly available in Kaggle.  
 The only jupyter notebook available here is to showcase the analytic work answering the questions as raised above regarding the International Student Survey. 
 The literal analysis is posted in Medium.  This README also serves as a supplement for the readers who are interested in how I code into the data analysis.
