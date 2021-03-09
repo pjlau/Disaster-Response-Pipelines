@@ -29,10 +29,11 @@ In this project, a supervised machine-learning is implemented with large labeled
 
 This dataset contains 30,000 messages drawn from events including an earthquake in Haiti in 2010, an earthquake in Chile in 2010, floods in Pakistan in 2010, super-storm Sandy in the U.S.A. in 2012, and news articles spanning a large number of years and 100s of different disasters. The data has been encoded with 36 different categories related to disaster response and has been stripped of messages with sensitive information in their entirety. 
 
-1. Which age group demonstrates the best academic performance?
-2. Which program has the students tend to perform well?
-3. Which survey question has the highest correlation to grade performance of the students?
-4. Does attending the classes help the students get better grade?
+The main objectives of this project is to learn:
+
+1. How to process the raw message data into the labeled samples suitable for machine learning research?
+2. How to train a machine capable of sorting a message into different categories?
+3. How to design an interactive webpage that serves as human machine interface (HMI) between the user and the trained machine?
 
 
 ## File Descriptions <a name="files"></a>
