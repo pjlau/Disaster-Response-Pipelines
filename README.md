@@ -46,9 +46,9 @@ This project took a deeper look at a survey on a small international student bod
 
 ## Results<a name="results"></a>
 
-The main analytic findings can be found at the Medium post available [here](https://jimpikkin.medium.com/a-quick-glance-of-student-time-management-vs-performance-8b1815e2d5).
+The main analytic findings can be found at the Medium post available.
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
-Thanks Darwin Li for collecting the survey data.  You can find the Licensing for the data and other descriptive information at the Kaggle link available [here](https://www.kaggle.com/xiaowenlimarketing/international-student-time-management).  Feel free to use the code here.
+Thanks Hugging Face for collecting the dataset of disaster response message.  You can find the data and other descriptive information at the GitHub link available [here](https://github.com/huggingface/datasets/tree/master/datasets/disaster_response_messages).  Feel free to use the code here.
 
