@@ -4,15 +4,26 @@ In this project, a supervised machine-learning is implemented with large labeled
 
 ### Table of Contents
 
-1. [Introduction](#introduction)
+1. [Instruction](#instruction)
 2. [Project Rationale](#rationale)
 3. [File Descriptions](#files)
 4. [Results](#results)
 5. [Licensing, Authors, and Acknowledgements](#licensing)
 
-## Introduction <a name="introduction"></a>
+## Instruction <a name="instruction"></a>
 
-All libraries cited in the code are pre-installed along with the Anaconda distribution of Python. The code should be executable using Python versions 3.*.
+1. Run the following commands in the project's root directory to set up your database and model.
+
+    - To run ETL pipeline that cleans data and stores in database
+        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
+    - To run ML pipeline that trains classifier and saves
+        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+
+2. Run the following command in the app's directory to run your web app.
+    `cd /home/workspace/app`
+    `python run.py`
+
+3. Go to http://0.0.0.0:3001/
 
 ## Project Rationale<a name="rationale"></a>
 
