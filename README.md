@@ -26,9 +26,9 @@ This project took a deeper look at a survey on a small international student bod
 
 ## File Descriptions <a name="files"></a>
 
-- International Students Survey.ipynb
-- International students Time management data.csv
-- Sheet2.csv
+- process_data.py
+- train_classifier.py
+- run.py
 
 The full set of files used in this data analytic study including (a) my python code in jupyter format and (b) two .csv files of the dataset publicly available in Kaggle.  
 The only jupyter notebook available here is to showcase the analytic work answering the questions as raised above regarding the International Student Survey. 
