@@ -46,7 +46,7 @@ This project took a deeper look at a survey on a small international student bod
 
 ## Results<a name="results"></a>
 
-The main analytic findings can be found at the Medium post available.
+Some main analytic findings are presented as follows.
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
