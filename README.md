@@ -26,9 +26,27 @@ This project took a deeper look at a survey on a small international student bod
 
 ## File Descriptions <a name="files"></a>
 
-- process_data.py
-- train_classifier.py
-- run.py
+# Preprocessed data
+
+- data/disaster_categories.csv
+- data/disaster_messages.csv
+
+# Python Code
+
+- data/process_data.py
+- models/train_classifier.py
+- app/run.py
+
+# Processed data
+
+- data/DisasterResponse.db
+- models/classifier.pkl
+
+# HTML
+
+- app/templates/go.html
+- app/templates/master.html
+
 
 The full set of files used in this data analytic study including (a) my python code in jupyter format and (b) two .csv files of the dataset publicly available in Kaggle.  
 The only jupyter notebook available here is to showcase the analytic work answering the questions as raised above regarding the International Student Survey. 
