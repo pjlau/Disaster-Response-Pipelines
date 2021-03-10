@@ -50,6 +50,9 @@ The main objectives of this project is to learn:
 The procedure of this project is briefly presented as follows.
 
  - `data/process_data.py`synthesizes the information from `data/disaster_messages.csv` and `data/disaster_categories.csv` into `data/DisasterResponse.db`. 
+ - `models/train_classifier.py` trains the machine-learning model `models/classifier.pkl` based on the sampled data in the `data/DisasterResponse.db`.
+ - `app/run.py` implements the human-machine interface (HMI) `app/templates/go.html` and `app/templates/master.html` in reference to `data/DisasterResponse.db`.
+ -  The HTML interface receives user messages on behalf of the machine-learning model `models/classifier.pkl` and visually outputs the model prediction.
 
 
 <img src="data/disaster_response.png" width="505" height="716">
