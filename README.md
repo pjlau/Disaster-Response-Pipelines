@@ -47,7 +47,10 @@ The main objectives of this project is to learn:
 
 ## Results<a name="results"></a>
 
-Some main analytic findings are presented as follows.
+The procedure of this project is briefly presented as follows.
+
+ - `data/process_data.py`synthesizes the information from `data/disaster_messages.csv` and `data/disaster_categories.csv` into `data/DisasterResponse.db`. 
+
 
 <img src="data/disaster_response.png" width="505" height="716">
 
