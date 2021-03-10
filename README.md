@@ -49,7 +49,7 @@ The main objectives of this project is to learn:
 
 Some main analytic findings are presented as follows.
 
-![flowchart](data/distaster_response.png)
+![flowchart](data/disaster_response.png)
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
