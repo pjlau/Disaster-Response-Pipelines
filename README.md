@@ -49,7 +49,7 @@ The main objectives of this project is to learn:
 
 Some main analytic findings are presented as follows.
 
-<img src="data/disaster_response.png" width="404" height="573">
+<img src="data/disaster_response.png" width="505" height="716">
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
