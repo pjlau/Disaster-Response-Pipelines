@@ -49,6 +49,8 @@ The main objectives of this project is to learn:
 
 Some main analytic findings are presented as follows.
 
+![flowchart](data/distaster_response.png)
+
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
 Thanks Hugging Face for collecting the dataset of disaster response message.  You can find the data and other descriptive information at the GitHub link available [here](https://github.com/huggingface/datasets/tree/master/datasets/disaster_response_messages).  Feel free to use the code here.
