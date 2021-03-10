@@ -51,7 +51,7 @@ Some main analytic findings are presented as follows.
 
 
 ![flowchart](data/disaster_response.png)
-
+![flowchart]<img src="data/disaster_response.png" width="400" height="790">
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
