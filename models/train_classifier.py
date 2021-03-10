@@ -18,12 +18,20 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report, fbeta_score
 from sklearn import preprocessing
 import pickle
-#import warnings
-#warnings.simplefilter(action="ignore", category=FutureWarning)
+
 import warnings
 warnings.filterwarnings('always') 
 import numpy as np
 def load_data(database_filepath):
+    '''
+    INPUT
+    database_filepath - string, specify the filepath where the SQL database DisasterResponse.db locates.
+    
+    OUTPUT
+    X - the sampled disaster messages
+    Y - the sampled labels for the disaster messages
+    category_names - the diaster categories implemented in machine-learning-model classification
+    '''
     engine = create_engine('sqlite:///'+database_filepath)
     df = pd.read_sql_table('DisasterResponse', engine)
     X = df['message']
@@ -32,7 +40,13 @@ def load_data(database_filepath):
     return X, Y, category_names
 
 def tokenize(text):
-    #text = re.sub(r'[^a-zA-Z0-9]', ' ',text)
+    '''
+    INPUT
+    text - string, text message including punctuation marks
+    
+    OUTPUT
+    clean_tokens - the tokenized and lematized text samples prepared for training
+    '''
     url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
     detected_urls = re.findall(url_regex, text)
     for detected_url in detected_urls:
@@ -42,38 +56,55 @@ def tokenize(text):
     clean_tokens = []
     for tok in tokens:
         clean_tok = lemmatizer.lemmatize(tok, pos='n').strip()
-        #I passed in the output from the previous noun lemmatization step. This way of chaining procedures is very common.
         clean_tok = lemmatizer.lemmatize(clean_tok, pos='v')
         clean_tokens.append(clean_tok)
     
     return clean_tokens
 
 def build_model():
+    '''
+    INPUT
+    N/A - a prototype model is defined via a machine-learning pipeline.
+
+    
+    OUTPUT
+    model - the machine model to be trained based on the sampled X_train, Y_train 
+    '''
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
         ('tfidf', TfidfTransformer()),
-        #('clf', MultiOutputClassifier(RandomForestClassifier()))
         ('clf', MultiOutputClassifier(LinearSVC()))
     ])
-    #parameters = [{'tfidf__norm': ['l1','l2'],'clf__estimator__criterion': ["gini", "entropy"],'clf__estimator__max_depth': [30,40],'clf__estimator__n_estimators':[10,20,40]}]
-    #parameters = {'clf__estimator__n_estimators':[1,10,100,1000],'clf__estimator__min_samples_split': [2,3,4,5]}
-    #parameters = [{'tfidf__norm': ['l1','l2'],'clf__estimator__criterion': ["gini", "entropy"]}, {"clf": [LinearSVC()],
-    # "clf__estimator__C": [1.0, 10.0, 100.0, 1000.0]}]
+
     parameters = {"clf__estimator__C": [1.0, 10.0, 100.0, 1000.0]}
-   # parameters = {"clf__estimator__C": [0.1,1.0, 10.0, 100.0, 1000.0],"clf__estimator__max_iter":[50,100],"clf__estimator__intercept_scaling":[0.1,0.5,1.0,1.5,2.0]}
-    #parameters = {'tfidf__norm': ['l1','l2'],'clf__estimator__learning_rate':[0.05,0.10,0.15,0.20],'clf__estimator__n_estimators':[10,25,50]}
-   #return pipeline
     model = GridSearchCV(pipeline, param_grid=parameters, scoring='accuracy',n_jobs=-1)
     return model
     
     
 def evaluate_model(model, X_test, Y_test, category_names):
+    '''
+    INPUT
+    model - the sklearn machine-learning model just trained
+    X_test - the sampled messages splitted from X for testing purposes
+    Y_test - the sampled labels splitted from Y for testing purposes
+    
+    OUTPUT
+    report - the text report showing main classification metrics: precision, recall, F1-score on each category  
+    '''
     Y_pred = model.predict(X_test)
     report= classification_report(Y_pred,Y_test, target_names=category_names)
     print(report)
     return report
 
 def save_model(model, model_filepath):
+    '''
+    INPUT
+    model - the sklearn machine-learning model just trained and tested
+    model_filepath - string, specify the filepath where the model classifier.pkl should be saved.
+    
+    OUTPUT
+    N/A - save the model in the designated file path.
+    '''
     with open(model_filepath, 'wb') as file:
         pickle.dump(model, file)
 
@@ -82,38 +113,13 @@ def main():
         database_filepath, model_filepath = sys.argv[1:]
         print('Loading data...\n    DATABASE: {}'.format(database_filepath))
         X, Y, category_names = load_data(database_filepath)
-        #Y = Y.astype(int)
 
         X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.20)
         
-        #X_train = preprocessing.scale(X_train) 
-        #X_test = preprocessing.scale(X_test) 
         
         print('Building model...')
         model = build_model()
         
-        #labels = np.unique(Y_train)
-        #print(labels)
-        #print(Y_train.shape) #(20972,36)
-        #sumY_train = Y_train.sum(axis=0)
-        #print(X_train.shape)
-        #print(X_test.shape)
-        #print(Y_train.shape)
-        #print(Y_test.shape)
-        #X_train.drop(['child_alone'], axis = 1, inplace = True)
-        #X_test.drop(['child_alone'], axis = 1, inplace = True)
-        #Y_train.drop(['child_alone'], axis = 1, inplace = True)
-        #Y_test.drop(['child_alone'], axis = 1, inplace = True)
-        #sumY_train = Y_train.sum(axis=0)
-        #print(sumY_train) 
-        #Y_train.loc[0:10, 'child_alone']=1
-        #sumY_train = Y_train.sum(axis=0)
-        #print(sumY_train) 
-        
-        #print(sumY_train) 
-        #for i in range(Y_train.shape[1]):
-        #    if sumY_train[i]==0:
-        #        Y_train.loc[0, i]=1
         
         print('Training model...')
         model.fit(X_train, Y_train)
