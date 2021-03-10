@@ -49,9 +49,7 @@ The main objectives of this project is to learn:
 
 Some main analytic findings are presented as follows.
 
-
-![flowchart](data/disaster_response.png)
-![flowchart]<img src="data/disaster_response.png" width="400" height="790">
+<img src="data/disaster_response.png" width="404" height="573">
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
