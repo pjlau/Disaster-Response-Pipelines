@@ -56,7 +56,7 @@ The procedure of this project is briefly presented as follows.
 
 The summary of the classification performance of the LinearSVC().
 
-<img src="data/LinearSVC_summary.png">
+<img src="data/LinearSVC_summary.jpg">
 
 ## Results<a name="results"></a>
 
