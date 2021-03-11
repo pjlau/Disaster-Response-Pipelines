@@ -45,7 +45,7 @@ def index():
     category_names=df.columns.values[4:]
     
     print(category_names)
-    category_sum=df[category_names].sum().sort_values(ascending=False)
+    category_sum=df[category_names].sum().sort_values(ascending=True)
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
