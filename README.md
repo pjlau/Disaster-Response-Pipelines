@@ -54,6 +54,10 @@ The procedure of this project is briefly presented as follows.
 
 <img src="data/disaster_response.png" width = 404 height = 573>
 
+The summary of the classification performance of the LinearSVC().
+
+<img src="data/LinearSVC_summary.png">
+
 ## Results<a name="results"></a>
 
 Message: My house is on fire.
