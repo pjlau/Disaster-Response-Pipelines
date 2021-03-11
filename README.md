@@ -55,20 +55,11 @@ The procedure of this project is briefly presented as follows.
 
 <img src="data/disaster_response.png" width = 404 height = 573>
 
+## Results<a name="results"></a>
+
 The summary of the classification performance of the LinearSVC().
 
 <img src="data/LinearSVC_summary.jpg">
-
-## Results<a name="results"></a>
-
-Message: My house is on fire.
-<img src="data/house.png">
-
-Message: The refugees are hungry and thirsty.
-<img src="data/refugees.png">
-
-Message: Please send an ambulance crew to transport the critically injured patients to a hospital.
-<img src="data/hospital.png">
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
