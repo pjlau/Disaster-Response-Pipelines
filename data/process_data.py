@@ -53,14 +53,11 @@ def clean_data(df):
     categories = categories.drop(missing_catogories, axis=1)
 
     # replace the old categories with the new binary one
-    df.drop(['categories'], axis = 1)
+    df.drop(['categories'], axis = 1, inplace = True)
 
-    # merge the processed binary categories into the dataframe
-    df =  pd.concat([df, categories], axis=1)
-
-    # drop duplicates redundant for machine-training purposes
-    df = df.drop_duplicates()
-
+    # merge the processed binary categories into the dataframe, drop duplicates redundant for machine-training purposes
+    df =  pd.concat([df, categories], axis=1, join="inner").drop_duplicates()
+  
     return df 
 
 
