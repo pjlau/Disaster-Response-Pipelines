@@ -52,7 +52,7 @@ The procedure of this project is briefly presented as follows.
  -  The HMI in the form of HTML interface receives user messages on behalf of the machine-learning model `models/classifier.pkl` and visually outputs the model prediction.
 
 
-<img src="data/disaster_response.png" width = 505 height = 573>
+<img src="data/disaster_response.png" width = 404 height = 573>
 
 ## Results<a name="results"></a>
 
