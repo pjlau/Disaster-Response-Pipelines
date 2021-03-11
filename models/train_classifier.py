@@ -9,13 +9,12 @@ import numpy as np
 import pandas as pd
 import re
 from sklearn.pipeline import Pipeline
-from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, ExtraTreesClassifier
 from sklearn.svm import LinearSVC
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import classification_report, fbeta_score
+from sklearn.metrics import classification_report
 from sklearn import preprocessing
 import pickle
 
@@ -55,8 +54,7 @@ def tokenize(text):
     lemmatizer = WordNetLemmatizer()
     clean_tokens = []
     for tok in tokens:
-        clean_tok = lemmatizer.lemmatize(tok, pos='n').strip()
-        clean_tok = lemmatizer.lemmatize(clean_tok, pos='v')
+        clean_tok = lemmatizer.lemmatize(tok).lower().strip()
         clean_tokens.append(clean_tok)
     
     return clean_tokens
@@ -65,7 +63,7 @@ def build_model():
     '''
     INPUT
     N/A - a prototype model is defined via a machine-learning pipeline.
-
+          LinearSVC() is the algorithm selected over RandomForestClassifier() for better speed and overall F1 score performance.
     
     OUTPUT
     model - the machine model to be trained based on the sampled X_train, Y_train 
@@ -105,8 +103,7 @@ def save_model(model, model_filepath):
     OUTPUT
     N/A - save the model in the designated file path.
     '''
-    with open(model_filepath, 'wb') as file:
-        pickle.dump(model, file)
+    pickle.dump(model, open(model_filepath, "wb"))
 
 def main():
     if len(sys.argv) == 3:
