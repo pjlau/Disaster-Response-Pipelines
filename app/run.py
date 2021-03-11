@@ -72,7 +72,7 @@ def index():
                 Bar(
                     y=category_sum,
                     x=category_sum.index,
-                    marker={'color': 'rgb(87, 144, 175)'}
+                    marker={'color': 'rgb(150, 90, 145)'}
                 )
             ],
 
