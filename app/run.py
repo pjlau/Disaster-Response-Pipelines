@@ -43,8 +43,9 @@ def index():
     genre_names = list(genre_counts.index)
     
     category_names=df.columns.values[4:]
+    
     print(category_names)
-    #category_counts=df[category_names].sum()
+    category_sum=df[category_names].sum().sort_values(ascending=False)
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -63,6 +64,27 @@ def index():
                 },
                 'xaxis': {
                     'title': "Genre"
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    y=category_sum,
+                    x=category_sum.index,
+                    marker={'color': 'rgb(87, 144, 175)'}
+                )
+            ],
+
+            'layout': {
+                'title': 'Message Summary',
+                'yaxis': {
+                    'title': "# of Messages"
+                },
+                'xaxis': {
+                    'title': "Categories",
+                    'tickangle': 90,
+                    'automargin': True
                 }
             }
         }
