@@ -56,8 +56,13 @@ The procedure of this project is briefly presented as follows.
 
 ## Results<a name="results"></a>
 
+Message: My house is on fire.
 <img src="data/house.png">
+
+Message: The refugees are hungry and thirsty.
 <img src="data/refugees.png">
+
+Message: Please send an ambulance crew to transport the critically injured patients to a hospital.
 <img src="data/hospital.png">
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
