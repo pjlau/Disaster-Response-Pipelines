@@ -23,7 +23,8 @@ In this project, a supervised machine-learning is implemented with large labeled
     `cd /home/workspace/app`
     `python run.py`
 
-3. Go to http://0.0.0.0:3001/
+3. Go to http://0.0.0.0:3001/. On Udacity Project Workspace IDE, open another terminal and type `env|grep WORK`.
+4. Copy and paste https://view6914b2f4-3001.udacity-student-workspaces.com. Replace view6914b2f4 with the space id you get to launch the webpage properly.
 
 ## Project Rationale<a name="rationale"></a>
 
