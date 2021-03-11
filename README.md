@@ -72,5 +72,5 @@ Message: Please send an ambulance crew to transport the critically injured patie
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
-Thanks Hugging Face for collecting the dataset of disaster response message.  You can find the data and other descriptive information at the GitHub link available [here](https://github.com/huggingface/datasets/tree/master/datasets/disaster_response_messages).  Feel free to use the code here.
+Thanks Udacity for designing the project. Thanks Hugging Face for collecting the dataset of disaster response message.  You can find the data and other descriptive information at the GitHub link available [here](https://github.com/huggingface/datasets/tree/master/datasets/disaster_response_messages).  Feel free to use the code here.
 
